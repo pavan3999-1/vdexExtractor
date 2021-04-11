@@ -24,7 +24,6 @@ jobs:
           ndk-version: r22b
       - run: |
       echo ${{ steps.setup-ndk.outputs.ndk-path }} > ./ndkpath.txt
-      ./make.sh cross-android
 
       - name: Create Release
         uses: actions/upload-artifact@v2
