@@ -19,7 +19,7 @@ jobs:
           java-version: 16
 
       - name: Get NDK 
-        run: sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;23.0.7196353-beta2"
+        run: sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;22.1.7171670"
 
       - name: Make cross-android
         run: bash ./make.sh cross-android
@@ -34,4 +34,3 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: bin
-
