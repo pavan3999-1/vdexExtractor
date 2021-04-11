@@ -22,8 +22,7 @@ jobs:
       - uses: nttld/setup-ndk@v1
         with:
           ndk-version: r22b
-      - run: |
-      echo ${{ steps.setup-ndk.outputs.ndk-path }} > ./ndkpath.txt
+      - run: echo ${{ steps.setup-ndk.outputs.ndk-path }} > ./ndkpath.txt
 
       - name: Create Release
         uses: actions/upload-artifact@v2
